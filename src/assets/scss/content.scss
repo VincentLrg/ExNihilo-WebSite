@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+.exn_content{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &3{
+        .exn_content_title{
+            position: relative;
+            &:before{
+                content:' ';
+                position: absolute;
+                width: 105%;
+                height: 60%;
+                top:25%;
+                left:-5%;
+                transform: rotate(-0.97deg);
+                background: $januariusBlue;
+            }
+        }
+    }
+}

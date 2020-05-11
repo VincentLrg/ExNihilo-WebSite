@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Hero :content="hero" />
+    <Content v-for="(item, index) in content" :key="index+1" :content="item" :index="index+1" />
   </div>
 </template>
 
@@ -8,11 +9,13 @@
 import { mapGetters } from "vuex";
 
 import Hero from "./components/Hero.vue";
+import Content from "./components/Content.vue";
 
 export default {
   name: "App",
   components: {
-    Hero
+    Hero,
+    Content
   },
   computed: {
     ...mapGetters(["content", "hero", "teams"])
@@ -20,18 +23,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
-body{
-  margin: 0;
-  box-sizing: border-box;
-}
-#app {
-  height: 600vh;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #000;
-  background: linear-gradient(#f5f4ff 5%, #6b5cff 25%, #000000 45%);
-}
+<style lang="scss" scoped>
+  @import "./assets/scss/fonts";
+  @import "./assets/scss/app";
 </style>

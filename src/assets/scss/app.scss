@@ -1,0 +1,22 @@
+@import "./variables.scss";
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+#app {
+    height: 600vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: $black;
+    background: linear-gradient($white 7.5%, $januariusBlue 30%, $black 47.5%);
+}
+h2{
+    font-size: 2.5em;
+    font-family: "superclarendon";
+    font-weight: bold;
+    color: $white;
+    position: relative;
+    z-index: 2;
+}

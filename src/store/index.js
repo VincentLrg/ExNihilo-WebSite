@@ -47,15 +47,15 @@ export default new Vuex.Store({
     content: [
       {
         design: "titleOnly",
-        title: "Si vous trouviez un téléphone abandonné"
+        title: "Si vous trouviez un téléphone abandonné..."
       },
       {
         design: "titleOnly",
-        title: "Quel secret pourriez-vous découvrir"
+        title: "Quel secret pourriez-vous découvrir ?"
       },
       {
         design: "titleOnly",
-        title: "Et si la réponse à vos question était autre part"
+        title: "Et si la réponse à vos question était autre part ?"
       },
       {
         design: "contentPromo",
