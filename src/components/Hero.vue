@@ -4,7 +4,12 @@
         <img :src="content.logo" alt="">
         <h1 class="eh_hero_title"><span class="title">{{ content.title }}</span><span class="baseline">{{ content.baseline }}</span></h1>
       </div>
-    <!-- <div class="eh_hero_scrollDown"></div> -->
+    <div class="eh_hero_scrollDown">
+        <p>
+            <span v-for="(item, index) in content.scroll" :key="index">{{item}}</span>
+            <span><a href="">↓</a></span>
+        </p>
+    </div>
   </div>
 </template>
 
@@ -35,5 +40,46 @@ export default {
                 display: none;
             }
         }
+        &_scrollDown{
+            p span {
+                font: 14px Monaco, MonoSpace;
+                height: 50px;
+                position: absolute;
+                width: 20px;
+                right: 10%;
+                bottom: 20%;
+                transform-origin: bottom center;
+            }
+            p span:nth-child(29) {
+                font-weight: bold;
+                font-size: 36px;
+                width: auto;
+                height: auto;
+                bottom: 17.5%;
+                a, a:link, a:visited {
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
     }
+    @mixin rotated-text($num-letters, $angle-span, $angle-offset) {
+        $angle-per-char: $angle-span / $num-letters;
+        @for $i from 1 through $num-letters{
+            .eh_hero_scrollDown p span:nth-child(#{$i}) {
+                animation: circleAnim#{$i} 15s linear infinite;
+                transform: rotate($angle-offset + $angle-per-char * $i)
+            }
+            @keyframes circleAnim#{$i} {
+                from {
+                    transform: rotate($angle-offset + $angle-per-char * $i)
+                }
+
+                to {
+                    transform: rotate($angle-offset + $angle-span + $angle-per-char * $i)
+                }
+            }
+        };
+    }
+    @include rotated-text(28, 360deg, 0deg)
 </style>

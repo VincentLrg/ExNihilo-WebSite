@@ -12,7 +12,37 @@ export default new Vuex.Store({
     hero: {
       title: "Ex Nihilo",
       baseline: "the answer is out there",
-      logo: logo
+      logo: logo,
+      scroll: [
+        "S",
+        "c",
+        "r",
+        "o",
+        "l",
+        "l",
+        " ",
+        "D",
+        "o",
+        "w",
+        "n",
+        " ",
+        "•",
+        " ",
+        "S",
+        "c",
+        "r",
+        "o",
+        "l",
+        "l",
+        " ",
+        "D",
+        "o",
+        "w",
+        "n",
+        " ",
+        "•",
+        " "
+      ]
     },
     content: [
       {
