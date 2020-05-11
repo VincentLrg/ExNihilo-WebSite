@@ -42,12 +42,13 @@ export default {
         }
         &_scrollDown{
             p span {
-                font: 14px Monaco, MonoSpace;
-                height: 50px;
+                font: 1em Monaco, MonoSpace;
+                font-weight: bold;
+                height: 4em;
                 position: absolute;
                 width: 20px;
-                right: 10%;
-                bottom: 20%;
+                right: 15%;
+                bottom: 15%;
                 transform-origin: bottom center;
             }
             p span:nth-child(29) {
@@ -55,7 +56,7 @@ export default {
                 font-size: 36px;
                 width: auto;
                 height: auto;
-                bottom: 17.5%;
+                bottom: 12.5%;
                 a, a:link, a:visited {
                     text-decoration: none;
                     color: #000;
