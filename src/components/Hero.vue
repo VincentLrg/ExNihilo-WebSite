@@ -6,7 +6,7 @@
       </div>
     <div class="eh_hero_scrollDown">
         <p>
-            <span v-for="(item, index) in content.scroll" :key="index">{{item}}</span>
+            <span v-for="(item, index) in content.scroll" :key="index" :class="`char${index+1}`">{{item}}</span>
             <span><a href="">↓</a></span>
         </p>
     </div>
@@ -66,7 +66,7 @@ export default {
     @mixin rotated-text($num-letters, $angle-span, $angle-offset) {
         $angle-per-char: $angle-span / $num-letters;
         @for $i from 1 through $num-letters{
-            .eh_hero_scrollDown p span:nth-child(#{$i}) {
+            .eh_hero_scrollDown p .char#{$i} {
                 animation: circleAnim#{$i} 15s linear infinite;
                 transform: rotate($angle-offset + $angle-per-char * $i)
             }
