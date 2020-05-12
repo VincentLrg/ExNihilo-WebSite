@@ -1,22 +1,43 @@
 @import "./variables.scss";
 
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
 body{
     margin: 0;
-    box-sizing: border-box;
+    font-size: 16px;
 }
 #app {
     height: 600vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: $black;
     background: linear-gradient($white 7.5%, $januariusBlue 30%, $black 47.5%);
 }
-h2{
-    font-size: 2.5em;
+h1, h2, h3{
     font-family: "superclarendon";
-    font-weight: bold;
+}
+h2{
     color: $white;
+    font-size: $h2;
+    font-weight: bold;
     position: relative;
     z-index: 2;
+}
+
+p{
+    color: $white;
+    font-family: "Source Sans Pro";
+}
+
+@media all and (max-width: 576px){
+    body{
+        font-size: 12px;
+    }
 }

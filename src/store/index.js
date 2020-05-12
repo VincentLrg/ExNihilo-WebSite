@@ -1,7 +1,11 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import logo from "../assets/Logo.svg"
+import logo from "../assets/images/Logo.svg"
+import An from "../assets/gif/An.gif"
+import Lea from "../assets/gif/Lea.gif"
+import Sarah from "../assets/gif/Sarah.gif"
+import Vincent from "../assets/gif/Vincent.gif"
 
 import * as getters from "./getters";
 
@@ -14,28 +18,28 @@ export default new Vuex.Store({
       baseline: "the answer is out there",
       logo: logo,
       scroll: [
-        "S",
+        "s",
         "c",
         "r",
         "o",
         "l",
         "l",
         " ",
-        "D",
+        "d",
         "o",
         "w",
         "n",
         " ",
         "•",
         " ",
-        "S",
+        "s",
         "c",
         "r",
         "o",
         "l",
         "l",
         " ",
-        "D",
+        "d",
         "o",
         "w",
         "n",
@@ -72,23 +76,27 @@ export default new Vuex.Store({
       {
         name: "An",
         description:
-          "Développeuse exerçant une passion beaucoup trop intense pour les chats."
-      },
+          "Développeuse exerçant une passion beaucoup trop intense pour les chats.",
+        gif: An
+        },
       {
         name: "Vincent",
         description:
-          "Développeur ayant du mal avec son reveil car passant beaucoup trop d’heure à dessiner des vêtements sur son ipad."
-      },
+          "Développeur ayant du mal avec son reveil car passant beaucoup trop d’heure à dessiner des vêtements sur son ipad.",
+        gif: Vincent
+        },
       {
         name: "Léa",
         description:
-          "Directrice artistique & UI designer tyrannisée par son chaton hors de contrôle."
-      },
+          "Directrice artistique & UI designer tyrannisée par son chaton hors de contrôle.",
+        gif: Lea
+        },
       {
         name: "Sarah",
         description:
-          "UX & UI designer râlant pour tout et n’importe quoi 24h/24."
-      }
+          "UX & UI designer râlant pour tout et n’importe quoi 24h/24.",
+        gif: Sarah
+        }
     ]
   },
   getters,

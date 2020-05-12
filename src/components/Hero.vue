@@ -7,7 +7,7 @@
     <div class="exn_hero_scrollDown">
         <p>
             <span v-for="(item, index) in content.scroll" :key="index" :class="`char${index+1}`">{{item}}</span>
-            <span><a href="">↓</a></span>
+            <span><a href="#exn_content1">↓</a></span>
         </p>
     </div>
   </div>

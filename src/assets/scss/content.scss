@@ -5,7 +5,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &1,&2,&3{
+        .exn_content_title{
+            text-align: center;
+        }
+    }
     &3{
+        overflow: hidden;
         .exn_content_title{
             position: relative;
             &:before{
@@ -17,6 +23,90 @@
                 left:-5%;
                 transform: rotate(-0.97deg);
                 background: $januariusBlue;
+            }
+        }
+    }
+    &_promo{
+        display: flex;
+        align-items: center;
+        .col1{
+            width: 35%;
+            margin: 0 3em 0 6em;
+            p{
+                font-family: "Source Sans Pro";
+            }
+            button{
+                border: 1px solid $white;
+                background: none;
+                padding: 1em 2em;
+                font-family: 'superclarendon';
+                color: $white;
+                border-radius: 2em;
+                transition: all 0.5s ease-in-out;
+                margin-top: 1em;
+                &:hover{
+                    background: $white;
+                    color: $black;
+                    cursor: pointer;
+                }
+            }
+        }
+        .col2{
+            width: 65%;
+            height: 65vh;
+            margin: 0 6em 0 3em;
+            .exn_content_promo_video{
+                background: $white;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                &:after{
+                    content: 'Vidéo promo';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 42.5%;
+                    text-align: center;
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px){
+    .exn_content{
+        &3{
+            .exn_content_title{
+                &:before{
+                    width: 100vw;
+                    height: 60%;
+                    top:25%;
+                    left:0;
+                    transform: rotate(-0.97deg);
+                    background: $januariusBlue;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 992px){
+    .exn_content{
+        &_promo{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .col1, .col2{
+                width: 95%;
+                margin: 0;
+            }
+            .col2{
+                margin-top: 1em;
+                height: 35vh;
+                .exn_content_promo_video{
+                    height: 100%;
+                }
             }
         }
     }
