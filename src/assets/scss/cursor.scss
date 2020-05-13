@@ -1,6 +1,12 @@
 @import "./variables.scss";
 
 .exn_cursor{
+    &_hide{
+        opacity: 0;
+        width: 30px;
+        height: 30px;
+        transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+    }
     &_point{
         top: 0;
         left: 0;

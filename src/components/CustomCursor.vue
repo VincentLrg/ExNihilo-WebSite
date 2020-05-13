@@ -1,5 +1,5 @@
 <template>
-    <div :class="[ 'exn_cursor', { 'exn_cursor_hover': hover }]">
+    <div :class="[ 'exn_cursor', { 'exn_cursor_hover': hover }, {'exn_cursor_hide': hideCursor}]">
         <div class="exn_cursor_point" ref="point" :style="cursorPoint"></div>
     </div>
 </template>
@@ -12,6 +12,7 @@ export default {
             xCursor: 0, 
             yCursor: 0,
             hover: false,
+            hideCursor: false,
             offset: 10,
             lastYScroll: 0,
         }
@@ -36,6 +37,13 @@ export default {
         const links = document.querySelectorAll("a, button");
         document.addEventListener("mousemove", this.moveCursor);
         document.addEventListener("scroll", this.scrollCursor);
+
+        document.addEventListener("mouseleave", () => {
+            this.hideCursor = true;
+        });
+        document.addEventListener("mouseenter", () => {
+            this.hideCursor = false;
+        });
 
         links.forEach(link => link.addEventListener("mouseover", () => {this.hover = true; this.offset = 15}))
         links.forEach(link => link.addEventListener("mouseleave", () => {this.hover = false; this.offset = 10}))
