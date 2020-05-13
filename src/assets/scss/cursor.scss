@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+.exn_cursor{
+    &_point{
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        pointer-events: none;
+        user-select: none;
+        border-radius: 100%;
+        background: $janusGreen;
+        z-index: 55555555;
+        backface-visibility: hidden;
+        will-change: transform;
+        transition: width .6s ease-in-out,
+                    height .6s ease-in-out,
+    }
+    &_hover {
+        .exn_cursor_point{
+            width: 30px;
+            height: 30px;
+            transition: width .6s ease-in-out,
+                        height .6s ease-in-out;
+        }
+    }
+}

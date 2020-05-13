@@ -3,26 +3,32 @@
     <Hero :content="hero" />
     <Content v-for="(item, index) in content" :key="index+1" :content="item" :index="index+1" />
     <Teams :members="teams" />
+    <CustomCursor />
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 
-import Hero from "./components/Hero.vue";
-import Content from "./components/Content.vue";
-import Teams from "./components/Teams.vue";
+import Content from "./components/Content";
+import CustomCursor from "./components/CustomCursor";
+import Hero from "./components/Hero";
+import Teams from "./components/Teams";
 
 export default {
   name: "App",
   components: {
-    Hero,
     Content,
+    CustomCursor,
+    Hero,
     Teams
   },
   computed: {
     ...mapGetters(["content", "hero", "teams"])
   },
+  methods: {
+
+  }
 };
 </script>
 
