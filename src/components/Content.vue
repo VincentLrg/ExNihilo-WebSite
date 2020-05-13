@@ -1,5 +1,5 @@
 <template>
-    <div :id="`exn_content${index}`" :class="`exn_content exn_content${index}`" :ref="`exnContent${index}`">
+    <section :id="`exn_content${index}`" :class="`exn_content exn_content${index}`" :ref="`exnContent${index}`">
         <div v-if="content.design === 'titleOnly'" class="exn_content_title">
             <h2 :data-text="content.title" :ref="`exnContent${index}_title`">{{content.title}}</h2>
         </div>
@@ -13,16 +13,44 @@
                 <div class="exn_content_promo_video"></div>
             </div>            
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
-import Janus from "../assets/images/tetedanus.jpg"
+import { mapActions, mapMutations } from 'vuex';
+
+import Janus from "../assets/images/tetedanus2.png"
 
 export default {
     name: "Content",
     props: ["content", "index"],
+    methods: {
+        ...mapActions([
+            'setOffset'
+        ]),
+        ...mapMutations([
+            'scrollInfoIncrement'
+        ]),
+        setOffsetM(el){
+            this.setOffset(el.offsetTop)
+        }
+    },
     mounted () {
+        this.scrollInfoIncrement();
+        switch(this.index){
+            case 1:
+                this.setOffsetM(this.$refs.exnContent1)
+                break
+            case 2:
+                this.setOffsetM(this.$refs.exnContent2)
+                break
+            case 3:
+                this.setOffsetM(this.$refs.exnContent3)
+                break
+            case 4:
+                this.setOffsetM(this.$refs.exnContent4)
+                break
+        }
         if(this.index == 1){
             const subliminal = this.$refs.exnContent1
             const title = this.$refs.exnContent1_title
@@ -35,10 +63,10 @@ export default {
             while(timing2 < 100 || timing2 > 500){
                 timing2 = Math.floor(Math.random() *3000)
             }
+            subliminal.style.backgroundSize= "cover"
+            subliminal.style.backgroundPosition= "center"
             setInterval( ()=> {
                 subliminal.style.backgroundImage = `url(${Janus})`
-                subliminal.style.backgroundPosition= "center"
-                subliminal.style.backgroundSize= "cover"
                 title.classList.add('glitchV1')
                 setTimeout(() => { 
                     subliminal.style.backgroundImage = ''

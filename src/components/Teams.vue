@@ -1,5 +1,5 @@
 <template>
-    <div class="exn_teams">
+    <section class="exn_teams" ref="exnTeams">
         <div class="exn_teams_container">
             <div class="exn_teams_title">
                 <h2>La team</h2>
@@ -17,16 +17,27 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
+import { mapActions, mapMutations } from 'vuex';
+
 export default {
     name: "Teams",
     props: ["members"],
+    methods: {
+        ...mapActions([
+            'setOffset'
+        ]),
+        ...mapMutations([
+            'scrollInfoIncrement'
+        ]),
+    },
     
     mounted() {
-        console.log(this.members)
+        this.scrollInfoIncrement();
+        this.setOffset(this.$refs.exnTeams.offsetTop);
     },
 }
 </script>

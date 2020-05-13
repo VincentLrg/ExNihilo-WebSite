@@ -11,6 +11,8 @@ html, body, a, button{
 html{
     scroll-behavior: smooth;
     box-sizing: border-box;
+    overflow-x: hidden;
+
 }
 body{
     margin: 0;
@@ -43,4 +45,9 @@ p{
     body{
         font-size: 12px;
     }
+}
+
+::selection{
+    background: $janusGreen;
+    opacity: 1;
 }

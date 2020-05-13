@@ -72,6 +72,13 @@ export default new Vuex.Store({
         video: ""
       }
     ],
+    scrollInfo: {
+      inMove: false,
+      activeSection: 0,
+      offsets: [],
+      touchStartY: 0,
+      count: 0,
+    },
     teams: [
       {
         name: "An",
@@ -100,7 +107,48 @@ export default new Vuex.Store({
     ]
   },
   getters,
-  mutations: {},
-  actions: {},
+  mutations: {
+    scrollInfoIncrement(state) {
+      state.scrollInfo.count++
+    },
+    setOffset(state, payload) {
+      state.scrollInfo.offsets.push(payload)
+    },
+    activeSectionSet(state, payload) {
+      state.scrollInfo.activeSection = payload
+    },
+    activeSectionInc(state) {
+      state.scrollInfo.activeSection++
+    },
+    activeSectionDec(state) {
+      state.scrollInfo.activeSection--
+    },
+    inMoveFalse(state) {
+      state.scrollInfo.inMove = false
+    },
+    inMoveTrue(state) {
+      state.scrollInfo.inMove = true
+    },
+    toucheYSet(state, payload) {
+      state.scrollInfo.touchStartY = payload
+    },
+    setCount(state, payload) {
+      state.scrollInfo.count = payload
+    }
+  },
+  actions: {
+    setOffset({ commit }, payload) {
+      commit('setOffset', payload)
+    },
+    setActiveSection({ commit }, payload) {
+      commit('activeSectionSet', payload)
+    },
+    setToucheY({ commit }, payload){
+      commit('toucheYSet', payload)
+    },
+    setCount({ commit }, payload){
+      commit('setCount', payload)
+    }
+  },
   modules: {}
 });
