@@ -4,6 +4,7 @@ module.exports = {
       sass: {
           prependData: `
             @import "src/assets/scss/app.scss";
+            @import "src/assets/scss/canvas.scss";
             @import "src/assets/scss/content.scss";
             @import "src/assets/scss/cursor.scss";
             @import "src/assets/scss/fonts.scss";

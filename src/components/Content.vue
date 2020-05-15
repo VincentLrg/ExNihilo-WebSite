@@ -1,5 +1,7 @@
 <template>
     <section :id="`exn_content${index}`" :class="`exn_content exn_content${index}`" :ref="`exnContent${index}`">
+        <Canvas v-if='index ===3' 
+        @wheel="wheel" @touchStart="touchStart" @touchMove="touchMove"/>
         <div v-if="content.design === 'titleOnly'" class="exn_content_title">
             <h2 :data-text="content.title" :ref="`exnContent${index}_title`">{{content.title}}</h2>
         </div>
@@ -19,10 +21,15 @@
 <script>
 import { mapActions, mapMutations } from 'vuex';
 
+import Canvas from './Canvas'
+
 import Janus from "../assets/images/tetedanus2.png"
 
 export default {
     name: "Content",
+    components: {
+        Canvas
+    },
     props: ["content", "index"],
     methods: {
         ...mapActions([
@@ -33,6 +40,15 @@ export default {
         ]),
         setOffsetM(el){
             this.setOffset(el.offsetTop)
+        },
+        wheel(e){
+            this.$emit('wheel', e)
+        },
+        touchStart(e){
+            this.$emit('touchStart', e)
+        },
+        touchMove(e){
+            this.$emit('touchMove', e)
         }
     },
     mounted () {

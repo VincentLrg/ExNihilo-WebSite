@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <Hero :content="hero" @scrollTo="scrollToSection"/>
-    <Content v-for="(item, index) in content" :key="index+1" :content="item" :index="index+1" />
+    <Content v-for="(item, index) in content" :key="index+1" :content="item" :index="index+1" 
+    @wheel="handleMouseWheel" @touchStart="touchStart" @touchMove="touchMove" />
     <Teams :members="teams" />
     <CustomCursor />
   </div>
@@ -44,6 +45,7 @@ export default {
     },
 
     handleMouseWheel(e) {
+      console.log(e)
       if (e.wheelDelta < 30 && !this.scrollInfo.inMove) {
         this.moveUp();
       } else if (e.wheelDelta > 30 && !this.scrollInfo.inMove) {
@@ -89,6 +91,8 @@ export default {
   },
   created() {
     this.setCount(0) 
+  },
+  mounted() {
     window.addEventListener('DOMMouseScroll', this.handleMouseWheel); // Mozilla Firefox
     window.addEventListener('mousewheel', this.handleMouseWheel, {
         passive: false
@@ -99,8 +103,6 @@ export default {
     window.addEventListener('touchmove', this.touchMove, {
         passive: false
     }); // mobile devices
-  },
-  mounted() {
     console.log(this.scrollInfo.count)
     console.log(this.scrollInfo.offsets)
   },

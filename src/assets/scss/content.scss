@@ -2,6 +2,7 @@
 
 .exn_content{
     height: 100vh;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +12,6 @@
         }
     }
     &3{
-        overflow: hidden;
         .exn_content_title{
             position: relative;
             &:before{
