@@ -4,6 +4,7 @@
     <Content v-for="(item, index) in content" :key="index+1" :content="item" :index="index+1" 
     @wheel="handleMouseWheel" @touchStart="touchStart" @touchMove="touchMove" />
     <Teams :members="teams" />
+    <Footer :content="footer" />
     <CustomCursor />
   </div>
 </template>
@@ -13,6 +14,7 @@ import { mapGetters, mapMutations, mapActions } from "vuex";
 
 import Content from "./components/Content";
 import CustomCursor from "./components/CustomCursor";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Teams from "./components/Teams";
 
@@ -21,11 +23,12 @@ export default {
   components: {
     Content,
     CustomCursor,
+    Footer,
     Hero,
-    Teams
+    Teams,
   },
   computed: {
-    ...mapGetters(["content", "hero", "scrollInfo", "teams"]),
+    ...mapGetters(["content", "footer", "hero", "scrollInfo", "teams"]),
   },
   methods: {
     ...mapMutations(["activeSectionInc", "activeSectionDec", "inMoveFalse", "inMoveTrue"]),
@@ -103,8 +106,6 @@ export default {
     window.addEventListener('touchmove', this.touchMove, {
         passive: false
     }); // mobile devices
-    console.log(this.scrollInfo.count)
-    console.log(this.scrollInfo.offsets)
   },
   destroyed() {
     window.removeEventListener('DOMMouseScroll', this.handleMouseWheel); // Mozilla Firefox
@@ -118,6 +119,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "./assets/scss/fonts";
-  @import "./assets/scss/app";
+  @import "./assets/scss/fonts.scss";
+  @import "./assets/scss/app.scss";
 </style>

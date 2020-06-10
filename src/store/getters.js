@@ -10,3 +10,6 @@ export const scrollInfo = state => {
 export const teams = state => {
   return state.teams;
 };
+export const footer = state => {
+  return state.footer;
+};

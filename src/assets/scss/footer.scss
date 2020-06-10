@@ -1,0 +1,26 @@
+.exn_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20vh;
+    a{
+        width: 12.5%;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 1024px){
+    .exn_footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        a{
+            margin-bottom: 10vh;
+            width: 50%;
+        }
+    }
+}

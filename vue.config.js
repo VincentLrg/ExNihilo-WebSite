@@ -8,6 +8,7 @@ module.exports = {
             @import "src/assets/scss/content.scss";
             @import "src/assets/scss/cursor.scss";
             @import "src/assets/scss/fonts.scss";
+            @import "src/assets/scss/footer.scss";
             @import "src/assets/scss/glitchV1.scss";
             @import "src/assets/scss/glitchV2.scss";
             @import "src/assets/scss/hero.scss";

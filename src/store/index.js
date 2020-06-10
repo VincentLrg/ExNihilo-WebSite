@@ -7,6 +7,11 @@ import Lea from "../assets/gif/Lea.gif"
 import Sarah from "../assets/gif/Sarah.gif"
 import Vincent from "../assets/gif/Vincent.gif"
 
+import logoWhite from "../assets/images/Logo-white.svg"
+import logoGobelins from "../assets/images/Logo-GOBELINS.png"
+import logoCCI from "../assets/images/cci-paris.png"
+
+
 import * as getters from "./getters";
 
 Vue.use(Vuex);
@@ -104,7 +109,12 @@ export default new Vuex.Store({
           "UX & UI designer râlant pour tout et n’importe quoi 24h/24.",
         gif: Sarah
         }
-    ]
+    ],
+    footer: {
+      logo: logoWhite,
+      gobelins: logoGobelins,
+      cci: logoCCI,
+    }
   },
   getters,
   mutations: {
