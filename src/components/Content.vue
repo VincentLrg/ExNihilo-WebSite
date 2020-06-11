@@ -15,6 +15,21 @@
                 <div class="exn_content_promo_video"></div>
             </div>            
         </div>
+        <div :class="`exn_round_container exn_round_container${index}`" v-if='index === 1'>
+            <div class="round blackborder"></div>
+            <div class="round blackborder"></div>
+            <div class="round blackborder"></div>
+        </div>
+        <div :class="`exn_round_container exn_round_container${index}`" v-if='index === 2'>
+            <div class="round whiteborder"></div>
+            <div class="round fullwhite"></div>
+            <div class="round whiteborder blackbg"></div>
+            <div class="round whiteborder"></div>
+        </div>
+        <div :class="`exn_round_container exn_round_container${index}`" v-if='index === 4'>
+            <div class="round whiteborder"></div>
+            <div class="round whiteborder"></div>
+        </div>
     </section>
 </template>
 

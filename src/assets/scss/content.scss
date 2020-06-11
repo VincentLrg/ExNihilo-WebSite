@@ -72,6 +72,98 @@
             }
         }
     }
+    .exn_round_container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        &1{
+            .round{
+                &:nth-child(1){
+                    width: 30rem;
+                    height: 30rem;
+                    top: 45%;
+                    left: 25%;
+                }
+                &:nth-child(2){
+                    width: 12.5rem;
+                    height: 12.5rem;
+                    top: 75%;
+                    right: 5%;
+                }
+                &:nth-child(3){
+                    width: 10rem;
+                    height: 10rem;
+                    top: 100%;
+                    left: 40%;
+                }
+            }
+        }
+        &2{
+            .round{
+                &:nth-child(1){
+                    width: 8rem;
+                    height: 8rem;
+                    top: 80%;
+                    left: 25%;
+                }
+                &:nth-child(2){
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    top: 70%;
+                    left: 45%;
+                }
+                &:nth-child(3){
+                    width: 6rem;
+                    height: 6rem;
+                    top: 97.5%;
+                    left: 75%;
+                    z-index: 25;
+                }
+                &:nth-child(4){
+                    width: 1rem;
+                    height: 1rem;
+                    top: 65%;
+                    left: 80%;
+                }
+            }
+        }
+        &4{
+            .round{
+                &:nth-child(1){
+                    width: 4rem;
+                    height: 4rem;
+                    top: 90%;
+                    left: 10%;
+                }
+                &:nth-child(2){
+                    width: 9.5rem;
+                    height: 9.5rem;
+                    top: 100%;
+                    left: 40%;
+                }
+            }
+        }
+        .blackborder{
+            border: 1px $black solid;
+        }
+        .whiteborder{
+            border: 1px $white solid;
+        }
+        .fullwhite{
+            background-color: $white;
+        }
+        .blackbg{
+            background-color: $black;
+        }
+        .round{
+            transform:translate(-50%,-50%);
+            transform-origin: center;
+            position: absolute;
+            border-radius: 100%;
+        }
+    }
 }
 
 @media all and (max-width: 768px){
