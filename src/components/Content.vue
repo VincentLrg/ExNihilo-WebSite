@@ -41,7 +41,7 @@ import { mapActions, mapMutations } from 'vuex';
 
 import Canvas from './Canvas'
 
-import Janus from "../assets/images/tetedanus2.png"
+import Janus from "../assets/images/tetejanus2.png"
 
 import smallRound from "../assets/images/small_round.svg"
 import mediumRound from "../assets/images/medium_round.svg"
