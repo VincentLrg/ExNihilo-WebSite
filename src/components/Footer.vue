@@ -1,7 +1,7 @@
 <template>
     <section class="exn_footer" ref="exnFooter">
         <a href="https://www.gobelins.fr/" target="_blank"><img :src="content.gobelins"></a>
-        <a href="#"><img :src="content.logo"></a>
+        <a href=""><img :src="content.logo"></a>
         <a href="https://www.cci-paris-idf.fr/" target="_blank"><img :src="content.cci"></a>
     </section>
 </template>

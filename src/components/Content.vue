@@ -25,10 +25,13 @@
             <div class="round fullwhite"></div>
             <div class="round whiteborder blackbg"></div>
             <div class="round whiteborder"></div>
+            <img :src="smallRound" class="round small">
+            <img :src="mediumRound" class="round medium">
         </div>
         <div :class="`exn_round_container exn_round_container${index}`" v-if='index === 4'>
             <div class="round whiteborder"></div>
             <div class="round whiteborder"></div>
+            <img :src="largeRound" class="round">
         </div>
     </section>
 </template>
@@ -40,8 +43,19 @@ import Canvas from './Canvas'
 
 import Janus from "../assets/images/tetedanus2.png"
 
+import smallRound from "../assets/images/small_round.svg"
+import mediumRound from "../assets/images/medium_round.svg"
+import largeRound from "../assets/images/large_round.svg"
+
 export default {
     name: "Content",
+    data(){
+        return{
+            smallRound: smallRound,
+            mediumRound: mediumRound,
+            largeRound: largeRound,
+        }
+    },
     components: {
         Canvas
     },
