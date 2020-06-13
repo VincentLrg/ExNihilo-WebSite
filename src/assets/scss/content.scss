@@ -37,20 +37,24 @@
             p{
                 font-family: "Source Sans Pro";
             }
-            button{
-                border: 1px solid $white;
-                background: none;
-                padding: 1em 2em;
-                font-family: 'superclarendon';
-                color: $white;
-                border-radius: 2em;
-                transition: all 0.5s ease-in-out;
-                margin-top: 1em;
-                &:hover{
-                    background: $white;
-                    color: $black;
+            a.btn{
+                text-decoration: none;
+                button{
+                    border: 1px solid $white;
+                    background: none;
+                    padding: 1em 2em;
+                    font-family: 'superclarendon';
+                    color: $white;
+                    border-radius: 2em;
+                    font-size: 0.875rem;
+                    transition: all 0.5s ease-in-out;
+                    margin-top: 1rem;
+                    &:hover{
+                        background: $white;
+                        color: $black;
+                    }
                 }
-            }
+                }
         }
         .col2{
             width: 65%;

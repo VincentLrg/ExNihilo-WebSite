@@ -20,15 +20,26 @@ module.exports = {
   },
   configureWebpack: {
       module: {
-        rules: [{
-          test: /\.(ttf|otf|eot|woff|woff2)$/,
-          use: {
-            loader: "file-loader",
-            options: {
-              name: "src/assets/fonts/[name].[ext]",
+        rules: [
+          {
+            test: /\.(ttf|otf|eot|woff|woff2)$/,
+            use: {
+              loader: "file-loader",
+              options: {
+                name: "src/assets/fonts/[name].[ext]",
+              },
             },
           },
-        }]
+          {
+            test: /\.apk$/,
+            use: {
+              loader: "file-loader",
+              options: {
+                name: "src/assets/apk/[name].[ext]",
+              },
+            },
+          },
+        ]
       }
     }
 };
