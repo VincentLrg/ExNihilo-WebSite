@@ -11,7 +11,7 @@ import logoWhite from "../assets/images/Logo-white.svg"
 import logoGobelins from "../assets/images/Logo-GOBELINS.png"
 import logoCCI from "../assets/images/cci-paris.png"
 
-import apk from "../assets/apk/ex-nihilo.apk"
+// import apk from "../assets/apk/ex-nihilo.apk"
 
 
 import * as getters from "./getters";
@@ -77,7 +77,7 @@ export default new Vuex.Store({
           "Le jeu prend la forme d’une enquête, durant laquelle il faudra résoudre des énigmes, aidé d’un mystérieux personnage appelé Janus. Celui-ci pourrait en savoir beaucoup plus que ce qu’il laisse transparaître...",
         button: "Télécharger le jeu",
         video: "",
-        download: apk
+        download: 'https://bit.ly/ex-nihilo-apk'
       }
     ],
     scrollInfo: {
