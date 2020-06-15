@@ -66,7 +66,7 @@ export default new Vuex.Store({
       },
       {
         design: "titleOnly",
-        title: "Et si la réponse à vos question était autre part ?"
+        title: "Et si la réponse à vos questions était autre part ?"
       },
       {
         design: "contentPromo",
