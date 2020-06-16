@@ -12,7 +12,7 @@
                 <a class="btn" target="_blank" :href="content.download"><button>{{content.button}}</button></a>
             </div>
             <div class="col2">
-                <div class="exn_content_promo_video"></div>
+                <iframe class="exn_content_promo_video" src="https://www.youtube.com/embed/NAXCO4u85EE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>            
         </div>
         <div :class="`exn_round_container exn_round_container${index}`" v-if='index === 1'>
@@ -94,10 +94,10 @@ export default {
                 break
             case 4:
                 this.setOffsetM(this.$refs.exnContent4)
-                // document.querySelector('.exn_content_promo .col1 a.btn').addEventListener('click', (e)=>{
-                //     e.preventDefault()
-                //     alert('Le jeu sera disponible au téléchargement le 18 juin !')
-                // })
+                document.querySelector('.exn_content_promo .col1 a.btn').addEventListener('click', (e)=>{
+                    e.preventDefault()
+                    alert('Le jeu sera disponible au téléchargement le 18 juin !')
+                })
                 break
         }
         if(this.index == 1){

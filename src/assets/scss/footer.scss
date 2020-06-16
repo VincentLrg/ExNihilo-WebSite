@@ -6,6 +6,9 @@
     height: 20vh;
     a{
         width: 12.5%;
+        &:nth-child(1){
+            width: 10%;
+        }
     }
     img{
         width: 100%;
