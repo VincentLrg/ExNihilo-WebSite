@@ -9,7 +9,7 @@ export default {
     name: "Canvas",
     mounted () {
         const p5js = p5 => {
-            const nlines = 30;
+            const nlines = 50;
             const res = 80; // number of segments for each line
             const factor = 0.008; // noise factor
             const speed = 0.005;
