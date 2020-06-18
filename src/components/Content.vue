@@ -98,10 +98,10 @@ export default {
                 //     e.preventDefault()
                 //     alert('Le jeu sera disponible au téléchargement le 18 juin !')
                 // })
-                // document.querySelector('.exn_content_promo .col1 a.btn').addEventListener('touchstart', (e)=>{
-                //     e.preventDefault()
-                //     alert('Le jeu sera disponible au téléchargement le 18 juin !')
-                // })
+                document.querySelector('.exn_content_promo .col1 a.btn').addEventListener('touchstart', (e)=>{
+                    e.preventDefault()
+                    window.location.assign(this.content.download)
+                })
                 break
         }
         if(this.index == 1){
