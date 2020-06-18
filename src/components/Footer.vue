@@ -27,12 +27,12 @@ export default {
         document.querySelector('.exn_footer a.a-gobelins').addEventListener('touchstart', (e)=>{
             e.preventDefault()
             alert('Vous allez être redirigé vers le site gobelins.fr.')
-            window.location.assign(this.content.download)
+            window.location.assign('https://www.gobelins.fr/')
         })
         document.querySelector('.exn_footer a.a-cci').addEventListener('touchstart', (e)=>{
             e.preventDefault()
             alert('Vous allez être redirigé vers le site cci-paris-idf.fr.')
-            window.location.assign(this.content.download)
+            window.location.assign('https://www.gobelins.fr/')
         })
     },
 }
