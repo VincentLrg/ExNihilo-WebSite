@@ -48,9 +48,9 @@ export default {
     },
 
     handleMouseWheel(e) {
-      if (e.wheelDelta < 30 && !this.scrollInfo.inMove) {
+      if (e.wheelDelta < 1 && !this.scrollInfo.inMove) {
         this.moveUp();
-      } else if (e.wheelDelta > 30 && !this.scrollInfo.inMove) {
+      } else if (e.wheelDelta > 1 && !this.scrollInfo.inMove) {
         this.moveDown();
       }
 

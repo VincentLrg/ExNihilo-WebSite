@@ -9,7 +9,7 @@
             <div class="col1">
                 <h2>{{content.title}}</h2>
                 <p><b>{{content.bold}}</b> {{content.content}}</p>
-                <a class="btn" target="_blank" :href="content.download"><button>{{content.button}}</button></a>
+                <a class="btn" target="_blank" rel="noopener noreferrer" :href="content.download"><button>{{content.button}}</button></a>
             </div>
             <div class="col2">
                 <iframe class="exn_content_promo_video" src="https://www.youtube.com/embed/NAXCO4u85EE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -94,14 +94,14 @@ export default {
                 break
             case 4:
                 this.setOffsetM(this.$refs.exnContent4)
-                document.querySelector('.exn_content_promo .col1 a.btn').addEventListener('click', (e)=>{
-                    e.preventDefault()
-                    alert('Le jeu sera disponible au téléchargement le 18 juin !')
-                })
-                document.querySelector('.exn_content_promo .col1 a.btn').addEventListener('touchstart', (e)=>{
-                    e.preventDefault()
-                    alert('Le jeu sera disponible au téléchargement le 18 juin !')
-                })
+                // document.querySelector('.exn_content_promo .col1 a.btn').addEventListener('click', (e)=>{
+                //     e.preventDefault()
+                //     alert('Le jeu sera disponible au téléchargement le 18 juin !')
+                // })
+                // document.querySelector('.exn_content_promo .col1 a.btn').addEventListener('touchstart', (e)=>{
+                //     e.preventDefault()
+                //     alert('Le jeu sera disponible au téléchargement le 18 juin !')
+                // })
                 break
         }
         if(this.index == 1){

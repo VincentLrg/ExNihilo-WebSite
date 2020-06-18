@@ -77,7 +77,7 @@ export default new Vuex.Store({
           "Le jeu prend la forme d’une enquête, durant laquelle il faudra résoudre des énigmes, aidé d’un mystérieux personnage appelé Janus. Celui-ci pourrait en savoir beaucoup plus que ce qu’il laisse transparaître...",
         button: "Télécharger le jeu",
         video: "",
-        download: 'https://bit.ly/ex-nihilo-apk'
+        download: 'https://bit.ly/ex-nihilo-1-2-1-0'
       }
     ],
     scrollInfo: {
