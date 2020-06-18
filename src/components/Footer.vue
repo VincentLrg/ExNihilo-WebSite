@@ -32,7 +32,7 @@ export default {
         document.querySelector('.exn_footer a.a-cci').addEventListener('touchstart', (e)=>{
             e.preventDefault()
             alert('Vous allez être redirigé vers le site cci-paris-idf.fr.')
-            window.location.assign('https://www.gobelins.fr/')
+            window.location.assign('https://www.cci-paris-idf.fr/')
         })
     },
 }
