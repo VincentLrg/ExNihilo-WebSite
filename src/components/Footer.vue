@@ -24,12 +24,12 @@ export default {
     mounted() {
         this.scrollInfoIncrement();
         this.setOffset(this.$refs.exnFooter.offsetTop);
-        document.querySelector('.exn_footer .a-gobelins').addEventListener('touchstart', (e)=>{
+        document.querySelector('.exn_footer a.a-gobelins').addEventListener('touchstart', (e)=>{
             e.preventDefault()
             alert('Vous allez être redirigé vers le site gobelins.fr.')
             window.location.assign(this.content.download)
         })
-        document.querySelector('.exn_footer .a-cci').addEventListener('touchstart', (e)=>{
+        document.querySelector('.exn_footer a.a-cci').addEventListener('touchstart', (e)=>{
             e.preventDefault()
             alert('Vous allez être redirigé vers le site cci-paris-idf.fr.')
             window.location.assign(this.content.download)
