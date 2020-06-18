@@ -59,6 +59,7 @@ export default {
     },
 
     touchStart(e) {
+      e.preventDefault();
       this.setToucheY(e.touches[0].clientY);
     },
 
