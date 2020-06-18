@@ -1,8 +1,8 @@
 <template>
     <section class="exn_footer" ref="exnFooter">
-        <a href="https://www.gobelins.fr/" target="_blank" rel="noopener noreferrer"><img :src="content.gobelins"></a>
+        <a href="https://www.gobelins.fr/" target="_blank" rel="noopener noreferrer" class="a-gobelins"><img :src="content.gobelins"></a>
         <a href=""><img :src="content.logo"></a>
-        <a href="https://www.cci-paris-idf.fr/" target="_blank" rel="noopener noreferrer"><img :src="content.cci"></a>
+        <a href="https://www.cci-paris-idf.fr/" target="_blank" rel="noopener noreferrer" class="a-cci"><img :src="content.cci"></a>
     </section>
 </template>
 
@@ -24,6 +24,16 @@ export default {
     mounted() {
         this.scrollInfoIncrement();
         this.setOffset(this.$refs.exnFooter.offsetTop);
+        document.querySelector('.exn_footer .a-gobelins').addEventListener('touchstart', (e)=>{
+            e.preventDefault()
+            alert('Vous allez être redirigé vers le site gobelins.fr.')
+            window.location.assign(this.content.download)
+        })
+        document.querySelector('.exn_footer .a-cci').addEventListener('touchstart', (e)=>{
+            e.preventDefault()
+            alert('Vous allez être redirigé vers le site cci-paris-idf.fr.')
+            window.location.assign(this.content.download)
+        })
     },
 }
 </script>

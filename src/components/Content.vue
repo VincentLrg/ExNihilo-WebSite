@@ -94,10 +94,6 @@ export default {
                 break
             case 4:
                 this.setOffsetM(this.$refs.exnContent4)
-                // document.querySelector('.exn_content_promo .col1 a.btn').addEventListener('click', (e)=>{
-                //     e.preventDefault()
-                //     alert('Le jeu sera disponible au téléchargement le 18 juin !')
-                // })
                 document.querySelector('.exn_content_promo .col1 a.btn').addEventListener('touchstart', (e)=>{
                     e.preventDefault()
                     alert('Vous allez être redirigé vers la page de téléchargement.')
